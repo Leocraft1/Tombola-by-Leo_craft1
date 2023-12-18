@@ -11,8 +11,8 @@ public class main{
         Scanner keyb=new Scanner(System.in);
         main callMethods=new main();
         //OPERATIONS
-        //Console clearing
-        System.out.print("\033[H\033[2J");
+        //Console clearing (disabled due to a visual bug)
+        //callMethods.clearScreen();
         table=new int[90];
         while(c<90){
             //Randomize a number between 1 and 90
@@ -20,8 +20,8 @@ public class main{
             //randomVerifier method verifies if the random number has already been randomized before
             if(callMethods.randomVerifier(table,randomNumber)){
                 table[randomNumber-1]=randomNumber;
-                //Console clearing
-                System.out.print("\033[H\033[2J");
+                //Console clearing (disabled due to a visual bug)
+                //callMethods.clearScreen();
                 System.out.println("========================================================================================================================");
                 System.out.println("Il numero estratto e': "+randomNumber);
                 //Print the table
@@ -58,5 +58,8 @@ public class main{
             }
         }
         return randomOk;
+    }
+    static void clearScreen() {  
+        System.out.print("\033[H\033[2J");  
     }
 }
