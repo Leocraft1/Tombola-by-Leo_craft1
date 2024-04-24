@@ -31,19 +31,22 @@ public class main{
                         cout=0;
                     }
                     if(table[i]==0){
-                        System.out.print("-- ");
+                        System.out.print("-- ");   
                     }else if(table[i]>9){
                         System.out.print(table[i]+" ");
                     }else{
-                        System.out.println("  ");
+                        System.out.print(table[i]+"  ");
                     }
                     cout++;
                 }
                 System.out.println("");
                 System.out.println("========================================================================================================================");
-                System.out.print("Premi invio per continuare ad estrarre: ");
+                if(c!=89){
+                    System.out.print("Premi invio per continuare ad estrarre: ");
+                }
                 keyb.nextLine();
                 c++;
+                clearScreen();
             }
         }
         //OUTPUT
@@ -59,7 +62,7 @@ public class main{
         }
         return randomOk;
     }
-    static void clearScreen() {  
-        System.out.print("\033[H\033[2J");  
+    static void clearScreen(){
+        System.out.print("\033[H\033[2J");
     }
 }
